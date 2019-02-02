@@ -13,15 +13,10 @@ class MainActivity : AppCompatActivity() {
 
     private var mTitleVisible : Boolean = true
     private var mAnimationDuration : Long = 0
-    private var mInitialX : Float = 0.0f
-    private var mInitialY : Float = 0.0f
-    private var mInputLine : DrawableBuilder = DrawableBuilder()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        mInputLine.line()
 
         mAnimationDuration = resources.getInteger(android.R.integer.config_shortAnimTime).toLong()
     }
