@@ -29,7 +29,8 @@
             android:fontFamily="serif-monospace"
             android:layout_width="180dp"
             android:layout_height="wrap_content"
-            android:id="@+id/button" android:layout_marginTop="8dp"
+            android:id="@+id/gameTitleButton"
+            android:layout_marginTop="8dp"
             app:layout_constraintVertical_bias="0.2"
             app:layout_constraintTop_toBottomOf="@+id/gameTitleText"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -42,12 +43,13 @@
             app:strokeColor="@android:color/white"
             app:cornerRadius="0dp"
             app:strokeWidth="2dp"
-            style="@style/Widget.AppCompat.Button.Borderless" app:rippleColor="@color/colorPrimaryDark"/>
+            style="@style/Widget.AppCompat.Button.Borderless" app:rippleColor="@color/colorPrimaryDark"
+            android:onClick="startButtonPress"/>
     <TextView
             android:text="@string/copyright_info"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView"
+            android:id="@+id/copyrightTitleText"
             android:layout_marginBottom="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
