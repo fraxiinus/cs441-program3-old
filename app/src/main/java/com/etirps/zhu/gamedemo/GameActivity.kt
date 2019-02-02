@@ -12,7 +12,6 @@ class GameActivity : AppCompatActivity() {
 
         gameView = GameView(this)
         setContentView(gameView)
-        //gameView?.startGame()
     }
 
     override fun onPause() {

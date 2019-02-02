@@ -11,12 +11,6 @@ class GameView(context: Context) : SurfaceView(context), Runnable {
 
     private var gameThread : Thread? = null
 
-    fun startGame(){
-        playing = true
-        gameThread = Thread(this)
-        gameThread?.start()
-    }
-
     override fun run() {
         while(playing) {
             draw()
