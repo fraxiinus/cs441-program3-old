@@ -18,6 +18,9 @@ class GameActivity : AppCompatActivity() {
     override fun onPause() {
         super.onPause()
         gameView?.pause()
+    }
+
+    override fun onBackPressed() {
         finish()
     }
 
