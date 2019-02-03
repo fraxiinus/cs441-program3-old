@@ -2,6 +2,8 @@ package com.etirps.zhu.gamedemo
 
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
+import android.graphics.Bitmap
+import android.graphics.Matrix
 import android.view.View
 import android.view.animation.AlphaAnimation
 import android.view.animation.Animation
@@ -43,4 +45,16 @@ fun View.animateAlpha(duration: Long = 500L,
             }
         })
         .startDelay = offset
+}
+
+fun Bitmap.rotate(degrees: Float): Bitmap {
+    val matrix = Matrix().apply { postRotate(degrees) }
+    return Bitmap.createBitmap(this, 0, 0, width, height, matrix, true)
+}
+
+fun Bitmap.resize(x: Float, y: Float): Bitmap {
+    val scaleWidth : Float = x / width
+    val scaleHeight : Float= y / height
+    val matrix = Matrix().apply { postScale(scaleWidth, scaleHeight) }
+    return Bitmap.createBitmap(this, 0, 0, width, height, matrix, true)
 }
